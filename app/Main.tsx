@@ -2,15 +2,9 @@ import React from "react";
 import hero from "../public/hero.png";
 import Image from "next/image";
 import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
   Divider,
   Select,
-  Stack,
   TextField,
-  Typography,
 } from "@mui/material";
 
 import bell from "../public/Bell.svg";
@@ -19,12 +13,11 @@ import clock from "../public/clock.svg";
 import chart from "../public/bar-chart-2.svg";
 import SmallCard from "./components/SmallCard";
 import eye from "../public/Eye.svg";
-import cohorts from "../public/Cohorts 1.svg";
 import BigCard from "./components/BigCard";
 function Main() {
   return (
-    <div className="w-7/12 overflow-y-scroll h-full pt-[5.4rem] pl-[3.8rem] bg-black from-black via-black to-transparent bg-custom-svg bg-no-repeat bg-cover bg-center">
-      <div className="flex flex-row mb-18 gap-10">
+    <div className="lg:w-7/12 w-full lg:overflow-y-scroll lg:h-full pt-[5.4rem] pl-5 pr-5 lg:pr-0 md:pl-[3.8rem] bg-black from-black via-black to-transparent bg-custom-svg bg-no-repeat bg-cover bg-center">
+      <div className="flex flex-col lg:flex-row mb-18 gap-10">
         <div className="w-1/2 pr-7 leading-9 flex flex-col justify-between gap-5 -mt-2">
           <Image alt="bell" src={bell} width={30} height={30} />
           <div className="w-80 text-zinc-100 text-3xl font-medium font-outline-1 text-shadow-lg leading-9">
@@ -35,7 +28,7 @@ function Main() {
             on-chain or when a dormant whale you care about becomes active.
           </div>
         </div>
-        <div className="flex w-1/2 overflow-x-auto flex-row gap-5 ">
+        <div className="flex w-full lg:w-1/2 overflow-x-auto flex-row gap-5 ">
           <SmallCard
             imageSrc={bell2}
             typographyText="We’ll be sending notifications to you here"
@@ -57,8 +50,8 @@ function Main() {
           />
         </div>
       </div>
-      <div className="flex flex-row mb-2">
-        <div className="w-1/2">
+      <div className="flex flex-col md:flex-row mb-2">
+        <div className="lg:w-1/2 w-full">
           <Image
             className="rounded-xl"
             src={hero}
@@ -68,7 +61,7 @@ function Main() {
           />
         </div>
 
-        <div className="w-1/2 pr-[3.8rem] text-right pt-5 flex flex-col gap-5">
+        <div className="w-full lg:w-1/2 pr-5 lg:pr-[3.8rem] text-right pt-5 flex flex-col gap-5">
           <div className="flex justify-end">
             <Image className="" src={eye} width={30} height={30} alt="eye" />
           </div>
@@ -89,9 +82,9 @@ function Main() {
           </div>
         </div>
         
-        <Divider sx={{mb:5, bgcolor:'white', mr:8}} light={true} flexItem />
+        <Divider sx={{mb:5, bgcolor:'white', mr:{sm:0, lg:8}}} light={true} flexItem />
 
-        <div className="flex w-95 overflow-x-auto flex-row gap-5">
+        <div className="flex lg:w-95 w-full overflow-x-auto flex-row gap-5 mb-10">
           <BigCard
             name="John F"
             designation="Ex Blackrock PM"
