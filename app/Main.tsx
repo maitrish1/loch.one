@@ -29,7 +29,7 @@ function Main() {
           </div>
         </div>
         <div className="flex w-full lg:w-1/2 overflow-x-auto flex-row gap-5 ">
-          <SmallCard
+          <SmallCard name='one'
             imageSrc={bell2}
             typographyText="We’ll be sending notifications to you here"
             additionalComponent={
@@ -39,13 +39,13 @@ function Main() {
           <SmallCard
             imageSrc={chart}
             typographyText="Notify me when any wallets move more than"
-            additionalComponent={<Select size="small" defaultValue="$1,000" />}
+            additionalComponent={<Select disabled size="small" defaultValue="$1,000" />}
           />
 
-          <SmallCard
+          <SmallCard name='three'
             imageSrc={clock}
             typographyText="Notify me when any wallet dormant for"
-            additionalComponent={<Select size="small" defaultValue="$1,000" />}
+            additionalComponent={<Select disabled size="small" defaultValue="$1,000" />}
             extratypographyText="becomes active"
           />
         </div>
