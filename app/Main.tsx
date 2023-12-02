@@ -23,7 +23,7 @@ import cohorts from "../public/Cohorts 1.svg";
 import BigCard from "./components/BigCard";
 function Main() {
   return (
-    <div className="w-7/12 h-full pt-[5.4rem] pl-[3.8rem] bg-slate-950 bg-[url('../public/bluela2.svg')] from-black via-black to-transparent">
+    <div className="w-7/12 overflow-y-scroll h-full pt-[5.4rem] pl-[3.8rem] bg-black from-black via-black to-transparent bg-custom-svg bg-no-repeat bg-cover bg-center">
       <div className="flex flex-row mb-18 gap-10">
         <div className="w-1/2 pr-7 leading-9 flex flex-col justify-between gap-5 -mt-2">
           <Image alt="bell" src={bell} width={30} height={30} />
