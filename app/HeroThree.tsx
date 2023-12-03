@@ -1,10 +1,18 @@
+"use client"
 import { Divider } from '@mui/material'
-import React from 'react'
+import React, { MutableRefObject, useRef } from 'react'
 import BigCard from './components/BigCard'
+import { useDraggable } from 'react-use-draggable-scroll';
+  
 
 const HeroThree = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+const { events } = useDraggable(ref as MutableRefObject<HTMLElement>);
+
+
+
   return (
-    <div className="flex flex-col items-end justify-evenly">
+    <div  className="flex flex-col items-end justify-evenly">
     <div className="w-1/2 pr-[3.8rem]">
       <div className="text-right text-zinc-100 text-2xl mb-5 font-medium leading-loose">
         Testimonials
@@ -17,7 +25,8 @@ const HeroThree = () => {
       flexItem
     />
 
-    <div className="flex lg:w-95 w-full overflow-x-auto flex-row gap-5 mb-10">
+    <div {...events}
+    ref={ref}  className="flex lg:w-95 w-full overflow-x-auto flex-row gap-5 mb-10">
       <BigCard
         name="John F"
         designation="Ex Blackrock PM"
