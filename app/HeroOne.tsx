@@ -8,7 +8,7 @@ import SmallCard from "./components/SmallCard";
 import { MenuItem, Select, TextField } from "@mui/material";
 const HeroOne = () => {
   return (
-    <div className="flex flex-col lg:flex-row mb-18 gap-10">
+    <div className="flex flex-col sm:flex-row mb-18 gap-10">
       <div className="w-1/2 pr-7 leading-9 flex flex-col justify-between gap-5 -mt-2">
         <Image alt="bell" src={bell} width={30} height={30} />
         <div className="w-80 text-zinc-100 text-3xl font-medium font-outline-1 text-shadow-lg leading-9">
